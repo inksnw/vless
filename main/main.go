@@ -2,7 +2,9 @@ package main
 
 import (
 	"flag"
-	"vless/common/cmdarg"
+	"fmt"
+	"vless/core"
+	"vless/core/common/cmdarg"
 )
 
 var (
@@ -21,7 +23,10 @@ var (
 )
 
 func printVersion() {
-
+	version:=core.VersionStatement()
+	for _,s:=range version{
+		fmt.Println(s)
+	}
 }
 
 func main() {
